@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+			scrollbar-width: none;
+			font-family: "Arima", system-ui;
+
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+        }
+		
+		.home{
+			width: 100%;
+			height: 900px;
+			background-image: url('./pexels-stywo-1054218.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.navbar{
+			width:100%;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 40px;
+			color: white;
+		}
+		.link{
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			font-weight: bold;
+		}
+		.link a{
+			text-decoration: none;
+			color: white;;
+		}
+		.navbar button{
+			height: 30px;
+			width: 80px;
+			border: none;
+			border-radius: 5px;
+		}
+
+		.login-box{
+			width: 100%;
+			height: 800px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.box{
+			height: 500px;
+			width: 900px;
+			border: 4px solid white;
+			display: flex;
+		}
+		.img{
+			height: 100%;
+			width: 45%;
+		}
+		.form{
+			height:100%;
+			width: 55%;
+		}
+
+		.img{
+			background-image: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)),url('https://img.freepik.com/premium-photo/quiet-sunlit-workspace-with-hands-typing-laptop-cozy-cafe-setting-vertical-mobile-wallpaper_896558-70039.jpg?w=360');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 50px;
+			gap: 30px;
+		}
+
+		.input{
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			gap: 10px;
+		}
+
+		.form h1{
+			text-align: center;
+		}
+		.input input{
+			width: 100%;
+			height: 40px;
+			text-align: center;
+		}
+
+		form{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			background-color: white;
+		}
+
+		form button{
+			width: 200px;
+			height: 40px;
+			background-color: rgb(62, 153, 156);
+			color: white;
+			border: none;
+			border-radius: 5px;
+		}
+
+		.sign{
+			display: flex;
+			gap: 10px;
+		}
+    </style>
+</head>
+<body>
+    <div class="home">
+		<div class="navbar">
+			<div class="logo">
+				<h1>CodingNepal</h1>
+			</div>
+			<div class="link">
+				<a href="">Home</a>
+				<a href="">Porffolio</a>
+				<a href="">Courses</a>
+				<a href="">About Us</a>
+				<a href="">Contact Us</a>
+			</div>
+			<div>
+				<button>LOG IN</button>
+			</div>
+		</div>
+		<div class="login-box">
+			<div class="box">
+				<div class="img">
+					<h1>Welcome Back</h1>
+					<p>Please log in using your personal information to stay connected with us.</p>
+				</div>
+				<div class="form">
+					<form action="">
+						<h1>LOGIN</h1>
+						<div class="input">
+							<input type="email" name="email" placeholder="Email">
+							<input type="password" name="pass" placeholder="password">
+							<a href="">Forget password?</a>
+						</div>
+						<button>Log In</button>
+						<div class="sign">
+							<h3>Don't have an account?</h3>
+							<a href="">SignUp</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

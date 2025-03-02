@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.header-logo{
+    width: 190px;
+    height: 60px; 
+}
+.link a{
+    padding: 30px;
+    text-decoration: none;
+    font-size: large;
+}
+.main-body{
+    width: 100%;
+}
+.image{
+    width: 100%;
+    height: 70vh;
+    background-image: url("https://gsoftsolution.org/images/first.jpg");
+    background-size: 100% 100%;
+}
+
+
+
+/* body */
+#about p{
+    text-align: justify;
+}
+.about{
+    text-align: center;
+    margin: 50px 300px;
+    
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    height: 300px;
+    width: 400px;
+    margin: 30px;
+    box-shadow: 10px 10px 10px rgb(153, 157, 158);
+    padding:80px 30px;
+
+}
+.card p{
+    text-align: justify;
+}
+.card1,.card2{
+    margin: 30px;
+}
+
+
+
+/* footer */
+.footer{
+    background-color: rgb(214, 249, 249);
+    padding: 40px;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 200px;
+}
+.address{
+    width: 200px;
+}
+.quick a{
+    display: block;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    height: 30px;
+    width: 30px;
+}
+.copyright{
+    text-align: center;
+}

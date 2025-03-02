@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omexo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            font-family: "Arima", system-ui;
+            font-optical-sizing: auto;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+        }
+
+        /* header */
+        .header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+        }
+        .logo{
+            height: 50px;
+            width: 200px;
+            background-image: url("https://omexo.omexer.com/wp-content/uploads/2021/06/logo.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .link{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 50px;
+        }
+        .link a{
+            text-decoration: none;
+            color: black;
+        }
+        .link a:hover{
+            color: rgb(30, 175, 183);
+        }
+        .link button{
+            width: 150px;
+            height: 40px;
+            background-color: rgb(113, 197, 212);
+            color: black;
+            border: none;
+            border-radius: 10px;
+        } 
+        .link button:hover{
+            transition: all 0.1s ease;
+            transform: scale(1.1);
+            box-shadow: 10px 10px 30px rgb(25, 115, 131);
+            font-weight: bold;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            min-width: 100px;
+            box-shadow: 5px 5px 30px;
+        }
+        .dropdown a{
+            color: black;
+            background-color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .course:hover .dropdown{
+            display: block;
+        }
+
+        /* home */
+        .home{
+            width: 100%;
+            height: 700px;
+            background-image: url("https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-repeat: no-repeat;
+            font-size: 30px;
+            padding: 250px;
+        }
+       
+        .search input{
+            width: 300px;
+            height: 40px;
+            background-color: rgb(250, 250, 250);
+            color: black;
+            text-align: center;
+            border: none;
+        }
+        .search{
+            display: flex;
+            align-items: center;
+        }
+        .search i{
+            background-color: rgb(230, 110, 59);
+            color: white;
+            font-size: 20px;
+            padding-top: 10px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+        }
+        .text{
+            height: auto;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+        }
+       
+        .about{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .div{
+            height: 200px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding:20px;
+            text-align: center;
+            box-shadow: 20px 20px 40px rgb(40, 125, 130);
+            border-radius: 10px;
+            background-color: rgb(102, 197, 214);
+            
+        }
+        .div:hover{
+            transform: scale(1.1); 
+            transition: transform 0.2s ease;
+            color: white;
+        }
+
+        .mid{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 250px;
+        }
+        .img{
+            width: 43%;
+            height: 500px;
+            background-image: url("https://www.shutterstock.com/image-photo/portrait-asian-college-student-on-600nw-84518011.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .text-2{
+            width: 30%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 20px;
+        }
+        .text-2 button{
+            width: 150px;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(248, 107, 56);
+            color: white;
+        }
+        .btn:hover{
+            background-color: rgb(255, 26, 26);
+            border: none;
+        }
+        .review{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 200px;
+            margin: 30px;
+        }
+
+        .review h1{
+            color: rgb(212, 94, 10);
+        }
+
+        .footer{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(187, 187, 187);
+        }
+        .foot-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+        .foot-text{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .cat{
+            padding-left: 370px;
+            width: 100%;
+        }
+        .foot-text button{
+            height: 30px;
+            width: 170px;
+            border: none;
+            border-radius: 10px;
+            border: 1px solid orangered;
+            color: white;
+            background-color: rgb(248, 107, 56);
+        }
+
+        .foot-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-div{
+            height: 230px;
+            width: 300px;
+            gap: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .img-div img{
+            height: 150px;
+            width: 200px;
+            box-shadow: 10px 10px 50px rgb(116, 116, 116);
+            border-radius: 10px;
+        }
+        .img-div:hover{
+            transition: all 0.1s ease;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+            </div>
+            <div class="link">
+                <a href="">Home</a>
+                <a href="">Pages</a>
+                <div class="course">
+                    <a href="#about">Courses</a>
+                    <div class="dropdown">
+                        <a href="#">Java full stack</a>
+                        <a href="#">Python</a>
+                        <a href="#">MERN stack</a>
+                    </div>
+                </div>
+                <a href="">Webinors</a>
+                <a href="">Blog</a>
+                <a href="#footer">Contact</a>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <button>Login/Register</button>
+            </div>
+        </div>
+
+        <div class="home">
+            <div class="text">
+                <h6>START LEARNING FROM HOME</h6>
+                <h1>Connect with Adam & Start Learning</h1>
+                <h6>Iam highy experienced with programming.Iam teaching online For About 20+ years.I can help you tu improve your skills</h6>
+                <div class="search">
+                    <input type="text" placeholder="search course" class="input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="about" id="about">
+            <div class="div">
+                <h2>Life Time Access</h2>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, velit?</h5>
+            </div>
+            <div class="div">
+                <h2>Free Course material</h2>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, velit?</h5>
+            </div>
+            <div class="div">
+                <h2>Dedicatd Support</h2>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, velit?</h5>
+            </div>
+        </div>
+
+        <div class="mid">
+            <div class="img">
+                
+            </div>
+            <div class="text-2">
+                <h6>about us</h6>
+                <h2>Iam Teaching online for About 5+ years on programming</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, rem? Vitae ut atque aliquam? Nam sequi quae quis, repellat aperiam dicta reiciendis officia non quasi, voluptatum ipsum id vitae saepe.</p>
+                <button class="btn">Learn more</button>
+            </div>
+        </div>
+
+
+
+        <div class="review">
+            <div class="enroll">
+                <h1>1200+</h1>
+                <h4>Students enrolled</h4>
+            </div>
+            <div class="courses">
+                <h1>15+</h1>
+                <h4>Courses</h4>
+            </div>
+            <div class="rate">
+                <h1>99%</h1>
+                <h4>Success rate</h4>
+            </div>
+        </div>
+
+
+
+        <div class="footer" id="footer">
+            <div class="foot-content">
+                <div class="cat">
+                    <h5>CATEGORIES</h5>
+                </div>
+                <div class="foot-text">
+                    <h2>Popular Categories</h2>
+                    <button class="btn">Review all categories</button>
+                </div>
+                <div class="foot-img">
+                    <div class="img-div">
+                        <img src="https://www.shutterstock.com/image-photo/training-webinar-elearning-skills-business-600nw-1135204490.jpg" alt="">
+                        <h3>Development</h3>
+                        <h5>4 Courses</h5>
+                    </div>
+                    <div class="img-div">
+                        <img src="https://img.freepik.com/premium-photo/business-course-male-teacher-presenting-graphs-charts-students-flat-design-vector-illustration-with-white-background_1254992-243788.jpg" alt="">
+                        <h3>Business</h3>
+                        <h5>3 Courses</h5>
+                    </div>
+                    <div class="img-div">
+                        <img src="https://thumbs.dreamstime.com/b/working-out-home-online-fitness-course-workout-video-personal-trainer-service-phone-health-sport-mobile-app-144081381.jpg" alt="">
+                        <h3>Health & Fitness</h3>
+                        <h5>5 Courses</h5>
+                    </div>
+                    <div class="img-div">
+                        <img src="https://www.aandmedu.in/wp-content/uploads/2020/04/Web-Designing.jpg" alt="">
+                        <h3>Web Design</h3>
+                        <h5>1 Courses</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 10px;
+            scrollbar-width: none;
+        }
+        body{
+            min-height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            min-height: 100%;
+            width: 100%;
+            font-size: 16px;
+            font-family:'Palatino Linotype', serif;
+        }
+        .logo img{
+            height: 20rem;
+            width: 30rem;
+            position: absolute;
+            top: 8rem;
+            left: 40%;
+            z-index: 2;
+        }
+        .home1{
+            min-height: 90rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .collection{
+            width: 60%;
+            min-height: 60rem;
+            display: flex;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+        .shoe{
+            min-height: 100%;
+            width: 50%;
+            background-image: url('./shouse.jpg');
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 5rem 2rem;
+        }
+        .lady{
+            min-height: 100%;
+            width: 50%;
+            background-image: url('./girlbgimg.jpg');
+            background-size: 100% 130%;
+        }
+        .home2{
+            width: 100%;
+            min-height: 90rem;
+            position: relative;
+        }
+        .yellow{
+            width: 50%;
+            min-height: 90rem;
+            position: absolute;
+            right: 0rem;
+            top: -28rem;
+            background-color: #b89f5d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .yellow-txt{
+            height: 30rem;
+            width:40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 2rem;
+            font-size: 20px;
+            position: absolute;
+            left: 7rem;
+        }
+        .yellow-txt button{
+            width: 15rem;
+            height: 4rem;
+            background-color: #5a7670;
+            border: none;
+            color: white;
+        }
+        .yellow-txt p{
+            text-align: end;
+        }
+        .yellow-txt h1{
+            font-size: 4.5rem;
+        }
+        .jacket{
+            height:37rem;
+            width:37rem;
+            background-image: url('./halgirl.jpg');
+            background-size: cover;
+            position: absolute;
+            left: 33.3rem;
+        }
+        .girl{
+            height:45rem;
+            width:30rem;
+            position: absolute;
+            background-image: url('./dashingirl.jpg');
+            background-size: 100% 100%;
+            top: 10rem;
+            left: 60rem;
+        }
+
+
+        @media only screen and (max-width: 900px){
+            html{
+                font-size: 8px;
+            }
+            .home1{
+                margin-top: 5rem;
+            }
+            .collection{
+                width: 80%;
+            }
+            .jacket{
+                height: 25rem;
+                width: 25rem;
+                left: 20rem;
+                top: -10rem;
+            }
+            .girl{
+                height: 35rem;
+                width: 20rem;
+                left: 35rem;
+                top: 0rem;
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            html{
+                font-size: 5px;
+            }
+           /* .collection{
+                width: 80%;
+           } */
+           .lady , .shoe{
+                width: 100%;
+           }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://images01.nicepage.com/a1389d7bc73adea1e1c1fb7e/fdadf984795e5525b46afd30/800pxHMLogo.svg.png" alt="">
+        </div>
+        <div class="home1">
+            <div class="collection">
+                <div class="shoe">
+                    <h2>NEW COLLECTION</h2>
+                    <h4>Spring-Summer, 2019</h4>
+                </div>
+                <div class="lady"></div>
+            </div>
+
+           
+        </div>
+
+        <div class="home2">
+            <div class="yellow">
+                <div class="yellow-txt">
+                    <p>Give someone you love the gift of fashion with H&M Gift Cards</p>
+                    <h1>LOVE & FASION</h1>
+                    <h5>Gift Cards available online & in-store</h5>
+                    <button>Gift Card</button>
+                </div>
+            </div>
+            <div class="jacket"></div>
+            <div class="girl"></div>
+        </div>
+
+    </div>
+</body>
+</html>
